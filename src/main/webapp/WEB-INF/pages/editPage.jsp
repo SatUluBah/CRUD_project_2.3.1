@@ -15,7 +15,7 @@
     <c:url value="/add" var="var"/>
 </c:if>
 <c:if test="${!empty user.name}">
-    <c:url value="/create" var="var"/>
+    <c:url value="/edit" var="var"/>
 </c:if>
 <form action="${var}" method="POST">
     <c:if test="${!empty user.name}">

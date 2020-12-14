@@ -24,7 +24,7 @@
             <td>${user.age}</td>
 
             <td>
-                <a href="/create/${user.id}">create</a>
+                <a href="/edit/${user.id}">edit</a>
                 <a href="/delete/${user.id}">delete</a>
             </td>
         </tr>

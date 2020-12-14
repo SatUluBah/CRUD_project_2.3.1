@@ -30,17 +30,17 @@ public class UserController {
         return modelAndView;
     }
 
-    @GetMapping("/create/{id}")
-    public ModelAndView createPage(@PathVariable("id") int id){
+    @GetMapping("/edit/{id}")
+    public ModelAndView editPage(@PathVariable("id") int id){
         User user = userService.getById(id);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("createPage");
+        modelAndView.setViewName("editPage");
         modelAndView.addObject("user", user);
         return modelAndView;
     }
 
-    @PostMapping("/create")
-    public ModelAndView editFilm(@ModelAttribute("user") User user) {
+    @PostMapping("/edit")
+    public ModelAndView editUser(@ModelAttribute("user") User user) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
         userService.edit(user);
@@ -50,7 +50,7 @@ public class UserController {
     @GetMapping("/add")
     public ModelAndView addPage() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("createPage");
+        modelAndView.setViewName("editPage");
         return modelAndView;
     }
 
